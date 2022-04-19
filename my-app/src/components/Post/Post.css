@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  text-align: start;
+}
+.App {
+  width: 730px;
+  height: 320px;
+  display: flex;
+  gap: 20px;
+  background-color: #c0bdbd;
+}
+
+.block {
+  width: 350px;
+  height: 308px;
+  margin: 5px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.image {
+  width: 300px;
+  height: 200px;
+  border-radius: 4px;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 12px;
+  margin: 10px 0px 24px 0px;
+}
+
+span {
+  color: #1e19af;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.wrapper {
+  width: 300px;
+}
