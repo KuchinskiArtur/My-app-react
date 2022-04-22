@@ -1,0 +1,56 @@
+.wrapper-template {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  align-items: baseline;
+  flex-direction: column;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin: 0 auto;
+  gap: 3px;
+  flex-wrap: wrap;
+}
+
+h1 {
+  color: #1474ff;
+  font-size: 36px;
+  margin: 0 auto;
+}
+
+p {
+  width: 436px;
+  font-size: 22px;
+  margin: 0 auto 40px;
+}
+
+button {
+  width: 300px;
+  height: 60px;
+  background-color: #1474ff;
+  border-radius: 30px;
+  border: none;
+  margin: 0px auto;
+  color: #fff;
+}
+
+.wrapper-template.dark h1 {
+  color: red;
+  margin: 0 auto;
+}
+
+.wrap.dark p {
+  color: #1474ff;
+}
+
+.btnTemplate.dark {
+  background-color: red;
+  color: #fff;
+  margin-bottom: 357px;
+}

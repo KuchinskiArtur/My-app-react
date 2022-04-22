@@ -2,47 +2,59 @@
   margin: 0;
   text-align: start;
 }
-.App {
-  width: 730px;
-  height: 320px;
+.App .App {
+  width: 330px;
+  height: 100%;
   display: flex;
   gap: 20px;
-  background-color: #c0bdbd;
+  margin: 8px;
 }
 
 .block {
-  width: 350px;
-  height: 308px;
-  margin: 5px;
+  width: 100%;
+  max-height: 100%;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  border-radius: 4px;
+  padding-left: 10px;
+  border-radius: 8px;
+  border: 1px solid;
+}
+
+.content p {
+  font-size: 28px;
+  color: #1474ff;
+}
+
+.userName span {
+  font-size: 18px;
+  color: #1474ff;
+  font-weight: 400;
 }
 
 .image {
   width: 300px;
   height: 200px;
   border-radius: 4px;
+  margin-top: 4px;
 }
 
-h1 {
+.wrapperPost h1 {
   font-size: 18px;
 }
 
-p {
+.wrapperPost p {
   font-size: 12px;
   margin: 10px 0px 24px 0px;
 }
 
-span {
+.wrapperPost span {
   color: #1e19af;
   font-size: 12px;
   font-weight: bold;
 }
 
-.wrapper {
+.wrapperPost {
   width: 300px;
 }

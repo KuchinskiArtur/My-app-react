@@ -1,0 +1,80 @@
+.Registration {
+  margin-bottom: 40px;
+  color: #1474ff;
+  font-size: 28px;
+  font-weight: 600;
+  background: #fff;
+  border: none;
+  cursor: progress;
+}
+
+.wrappers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(140, 140, 140);
+  margin-right: 190px;
+}
+
+.confirm {
+  margin-right: 9%;
+}
+
+input {
+  color: #1474ff;
+  width: 244px;
+  height: 60px;
+  margin-left: 10px;
+  border: 1px solid #1474ff;
+  padding-left: 3%;
+  font-size: 24px;
+  border-radius: 30px;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 40px;
+}
+
+.wrap h1 {
+  font-size: 12px;
+}
+
+.wrap p {
+  font-size: 12px;
+  width: 152px;
+}
+
+.wrap button {
+  width: 30px;
+}
+
+.lastLogin {
+  border: none;
+  color: #1474ff;
+  background-color: #fff;
+  font-weight: bold;
+  padding: 0px;
+}
+
+.lastLogin.dark {
+  background-color: black;
+  color: aqua;
+}
+
+.wrap.dark p {
+  color: #fff;
+  margin: 40px auto;
+}
+
+.wrap.dark {
+  margin: 0 auto;
+}

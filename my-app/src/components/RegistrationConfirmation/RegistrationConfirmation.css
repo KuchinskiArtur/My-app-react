@@ -1,0 +1,77 @@
+.wrapperRegistration {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  align-items: baseline;
+  flex-direction: column;
+}
+
+.wrapperRegistration {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin: 0 auto;
+  gap: 3px;
+  flex-wrap: wrap;
+}
+
+.wrapperRegistration p {
+  font-size: 14px;
+  width: 270px;
+  margin: -2px auto;
+}
+
+h1 {
+  color: #1474ff;
+  font-size: 36px;
+}
+
+p {
+  width: 436px;
+  font-size: 22px;
+  margin: 0 auto;
+}
+
+span {
+  color: #1474ff;
+}
+
+button {
+  width: 300px;
+  height: 60px;
+  margin-left: 10px;
+  background-color: #1474ff;
+  border-radius: 30px;
+  border: none;
+  margin: 20px auto;
+  color: #fff;
+}
+
+.wrapRegistration.light {
+  margin: 50px auto;
+}
+
+.wrapRegistration.dark {
+  margin: 50px auto;
+}
+
+.wrapperRegistration.dark h1 {
+  color: red;
+}
+
+.wrapRegistration.dark p {
+  color: #fff;
+}
+
+.wrapRegistration.dark span {
+  color: red;
+}
+
+.btnRegistration.dark {
+  background-color: red;
+  color: black;
+  margin: 0 0 420px 0;
+}

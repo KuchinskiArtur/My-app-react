@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  position: relative;
 }
 
 .App-logo {
@@ -35,4 +36,117 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.darkTheme {
+  border: none;
+  background-color: #1474ff;
+  color: #fff;
+  border-radius: 32px;
+  height: 30px;
+  width: 64px;
+  margin: 20px 1400px 0 0;
+}
+
+.darkTheme.dark {
+  background-color: red;
+  color: #000;
+}
+
+.App.dark {
+  background-color: #000;
+}
+
+.accountLogin {
+  width: 302px;
+  height: 60px;
+  margin-left: 10px;
+  background-color: #1474ff;
+  border-radius: 30px;
+  border: none;
+  margin-top: 15px;
+  color: #fff;
+  font-size: 15px;
+  margin: 25px 0 0 10px;
+}
+
+.accountLogin.dark {
+  background-color: red;
+}
+
+.wrapperLogin .login {
+  color: #1474ff;
+  border-right: 4px solid black;
+}
+
+.login {
+  font-size: 28px;
+  font-weight: 600;
+  background-color: #fff;
+  color: rgb(140, 140, 140);
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.wrapperLogin.dark {
+  background-color: #000;
+}
+
+.login.dark {
+  background-color: black;
+}
+
+.Registration.dark {
+  background-color: black;
+}
+
+.wrapperLogin {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  width: 300px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.wrapperLogin.loginlight .Registration {
+  font-size: 28px;
+  font-weight: 600;
+  background-color: #fff;
+  border: none;
+  color: rgb(140, 140, 140);
+}
+
+.wrapperLogin.logindark .Registration {
+  color: rgb(140, 140, 140);
+}
+
+.wrapperLogin.registlight .login {
+  font-size: 28px;
+  font-weight: 600;
+  background-color: #fff;
+  border: none;
+  color: rgb(140, 140, 140);
+  border-right: 4px solid black;
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+  border-radius: 0px;
+}
+
+.wrapperLogin.registdark .login {
+  color: rgb(140, 140, 140);
+  border-right: 4px solid red;
+}
+
+.wrapperLogin.logindark .login {
+  color: #1474ff;
+  border-right: 4px solid red;
+}
+
+.d-none {
+  display: none !important;
 }
