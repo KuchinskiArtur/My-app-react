@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import "./Login.css";
 
-const Login = ({ isDark, onChange, onClick }: any) => {
-  // const [login, setLogin] = useState("defolt");
+interface ILoginProps {
+  isDark: boolean;
+  onChange: (prev: any) => void;
+  onClick: (prev: any) => void;
+}
+
+const Login = ({ isDark, onChange, onClick }: ILoginProps) => {
   return (
     <div className="firstBlock">
       <div className="wrappers">

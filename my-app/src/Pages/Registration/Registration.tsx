@@ -1,7 +1,19 @@
 import React from "react";
 import "./Registration.css";
 
-const Registration = ({ isDark, onChange, onClick }: any) => {
+interface IRegistrationProps {
+  isDark: boolean;
+  onChange: (prev: any) => void;
+  onClick: (prev: any) => void;
+  error: boolean;
+}
+
+const Registration = ({
+  isDark,
+  onChange,
+  onClick,
+  error,
+}: IRegistrationProps) => {
   return (
     <div className="firstBlock">
       <div className="wrappers">
@@ -19,6 +31,7 @@ const Registration = ({ isDark, onChange, onClick }: any) => {
             onChange((prev: any) => ({ ...prev, email: event.target.value }))
           }
         />
+        {error && <div>Email введен некоректно. Пожалуйста исправьте</div>}
         <label htmlFor="Password">Password</label>
         <input
           type="password"
@@ -38,6 +51,7 @@ const Registration = ({ isDark, onChange, onClick }: any) => {
             }))
           }
         />
+        {/* {error && <div>Пароли не совпадают. Пожалуйста исправьте</div>} */}
         <button
           className={"accountLogin " + (isDark ? "dark" : "light")}
           onClick={onClick}

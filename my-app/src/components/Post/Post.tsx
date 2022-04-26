@@ -1,6 +1,13 @@
 import React from "react";
 import "./Post.css";
 
+// interface PostProps {
+//   img?: object;
+//   header: string;
+//   description: string;
+//   date: string;
+// }
+
 const Post = ({ img, header, description, date }: any) => {
   return (
     <div>

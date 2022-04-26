@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import "./App.css";
-import Form from "./components/Form";
-import PostsOne from "./components/PostsOne";
-import Input from "./components/Input";
-import Post from "./components/AllPost";
-import PostsAll from "./components/PostsAll";
-import Login from "./components/Login";
-import RegistrationConfirmation from "./components/RegistrationConfirmation";
-import Template from "./components/Template";
-import Registration from "./components/Registration";
+import Login from "./Pages/Login";
+import RegistrationConfirmation from "./Pages/RegistrationConfirmation";
+import Template from "./Pages/Template";
+import Registration from "./Pages/Registration";
+import PostsAll from "./Pages/AllPost";
+import Header from "./components/Header/Header";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -30,6 +27,9 @@ function App() {
     password: "",
     confirmPassword: "",
   });
+
+  const regex = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
+  const [error, setError] = useState(false);
   const login = () => {
     if (
       registrationData.name &&
@@ -38,7 +38,12 @@ function App() {
       registrationData.confirmPassword
     ) {
       if (registrationData.password === registrationData.confirmPassword) {
-        setIsRegistration(false);
+        if (regex.test(registrationData.email)) {
+          setIsRegistration(false);
+          setError(false);
+        } else {
+          setError(true);
+        }
       }
     }
   };
@@ -108,12 +113,14 @@ function App() {
           isDark={isDark}
           onChange={setRegistrationData}
           onClick={login}
+          error={error}
         />
       ) : (
         <RegistrationConfirmation isDark={isDark} onClick={home} />
       )}
       {/* <PostsOne /> */}
       {/* <PostsAll /> */}
+      {/* <Header /> */}
     </div>
   );
 }

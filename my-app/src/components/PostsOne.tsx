@@ -1,6 +1,5 @@
 import React from "react";
 import "../App.css";
-import Form from "./Form";
 import Input from "./Input";
 import Post from "./Post";
 

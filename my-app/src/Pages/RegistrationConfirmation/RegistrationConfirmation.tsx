@@ -1,7 +1,15 @@
 import "./RegistrationConfirmation.css";
 import React, { useState } from "react";
 
-const RegistrationConfirmation = ({ isDark, onClick }: any) => {
+interface IRegistrationConfirmationProps {
+  isDark: boolean;
+  onClick: (prev: any) => void;
+}
+
+const RegistrationConfirmation = ({
+  isDark,
+  onClick,
+}: IRegistrationConfirmationProps) => {
   return (
     <div className="firstBlock">
       <div className={"wrapperRegistration " + (isDark ? "dark" : "light")}>

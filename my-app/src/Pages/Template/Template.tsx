@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import "./Template.css";
 
-const RegistrationConfirmation = ({ isDark, onClick }: any) => {
+interface templateProps {
+  isDark: boolean;
+  onClick: (prev: any) => void;
+}
+
+const RegistrationConfirmation = ({ isDark, onClick }: templateProps) => {
   return (
     <div className="firstBlock">
       <div className={"wrapper-template " + (isDark ? "dark" : "light")}>

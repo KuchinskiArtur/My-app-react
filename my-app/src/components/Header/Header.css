@@ -1,0 +1,81 @@
+.userName {
+  position: absolute;
+  left: 8rem;
+  top: 6px;
+  color: #1474ff;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+  background-color: #1474ff;
+  margin-top: 13px;
+  height: 110px;
+  position: relative;
+}
+
+.content h1 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 40px;
+}
+
+.contentP {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.addPost {
+  background-color: #1474ff;
+  border: none;
+  color: #fff;
+  margin: 5px 24px 0 0;
+  cursor: pointer;
+}
+
+.logOut {
+  background-color: #1474ff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.done {
+  position: absolute;
+  left: 10rem;
+  top: 1rem;
+  background-color: #1474ff;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.userLogin {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+  background-color: #1474ff;
+  margin-top: 13px;
+  height: 110px;
+  position: relative;
+}
+
+.userWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 1000px 0 0;
+  align-items: baseline;
+}
+
+.userWrap button {
+  background-color: #1474ff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
