@@ -49,86 +49,31 @@
 
 .darkTheme.light {
   position: relative;
-  left: 45%;
-  margin-top: 16px;
+  left: 2%;
+  top: 10px;
 }
 
 .darkTheme.dark {
-  background-color: red;
   color: #000;
   position: relative;
-  left: 45%;
-  margin-top: 16px;
+  left: 2%;
+  top: 10px;
 }
 
 .App.dark {
   background-color: #000;
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
 }
 
-.accountLogin {
-  width: 302px;
-  height: 60px;
-  margin-left: 10px;
-  background-color: #1474ff;
-  border-radius: 30px;
-  border: none;
-  color: #fff;
-  font-size: 15px;
-  margin: 25px 0 0 10px;
+.firstBlock {
+  width: 1519px;
+  height: 575px;
 }
 
 .accountLogin.dark {
   background-color: red;
-}
-
-.wrapperLogin .login {
-  color: #1474ff;
-  border-right: 4px solid black;
-}
-
-.login {
-  font-size: 28px;
-  font-weight: 600;
-  background-color: #fff;
-  color: rgb(140, 140, 140);
-  border-left: none;
-  border-top: none;
-  border-bottom: none;
-  cursor: pointer;
-  border-radius: 0;
-}
-
-.wrapperLogin.dark {
-  background-color: #000;
-}
-
-.login.dark {
-  background-color: black;
-}
-
-.Registration.dark {
-  background-color: black;
-}
-
-.wrapperLogin {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  width: 300px;
-  margin: 0 auto;
-  gap: 10px;
-}
-
-.wrapperLogin.loginlight .Registration {
-  font-size: 28px;
-  font-weight: 600;
-  background-color: #fff;
-  border: none;
-  color: rgb(140, 140, 140);
-}
-
-.wrapperLogin.logindark .Registration {
-  color: rgb(140, 140, 140);
 }
 
 .wrapperLogin.registlight .login {
@@ -144,58 +89,73 @@
   border-radius: 0px;
 }
 
-.wrapperLogin.registdark .login {
-  color: rgb(140, 140, 140);
-  border-right: 4px solid red;
-}
-
-.wrapperLogin.logindark .login {
-  color: #1474ff;
-  border-right: 4px solid red;
-}
-
 .d-none {
   display: none !important;
 }
 
-nav {
-  height: 50px;
-  background-color: gray;
-  z-index: 50;
-  display: flex;
-  align-items: center;
-}
-
-.burgerBtn {
-  width: 30px;
-  height: 30px;
-  margin-left: 20px;
+.toggle {
+  touch-action: pan-x;
+  display: inline-block;
   position: relative;
   cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
-.burgerBtn::after {
-  content: "";
+.toggle-input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
   position: absolute;
+  width: 1px;
+}
+
+.toggle-check,
+.toggle-uncheck {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 0;
   bottom: 0;
-  width: 20px;
-  background-color: #1474ff;
-  height: 2px;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 0;
+  opacity: 0;
+  transition: opacity 0.25s ease;
 }
 
-.burgerBtn::before {
-  content: "";
-  position: absolute;
-  top: 24px;
-  width: 20px;
-  background-color: #1474ff;
-  height: 2px;
+.toggle-container {
+  width: 64px;
+  height: 30px;
+  padding: 0;
+  border-radius: 30px;
+  background-color: #4d4d4d;
+  transition: all 0.2s ease;
 }
 
-.burgerBtn span {
+.toggle-circle {
   position: absolute;
-  top: 20px;
-  width: 20px;
-  background-color: #1474ff;
-  height: 2px;
+  top: 4px;
+  left: 1px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #4d4d4d;
+  border-radius: 50%;
+  background-color: #fafafa;
+  box-sizing: border-box;
+  transition: all 1.25s ease;
+}
+
+.darkTheme.dark .toggle-circle {
+  left: 40px;
 }

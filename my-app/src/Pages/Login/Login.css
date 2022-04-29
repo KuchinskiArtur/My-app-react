@@ -7,10 +7,56 @@
   margin: 10px auto;
 }
 
+.wrapperLogin {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  width: 300px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.accountLogin {
+  width: 302px;
+  height: 60px;
+  margin-left: 10px;
+  background-color: #1474ff;
+  border-radius: 30px;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  margin: 25px 0 0 10px;
+}
+
+.login.dark {
+  background-color: black;
+}
+
 .wrappers {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.wrapperLogin .login {
+  color: #1474ff;
+  border-right: 4px solid black;
+}
+
+.wrapperLogin.dark {
+  background-color: #000;
+}
+
+.login {
+  font-size: 28px;
+  font-weight: 600;
+  background-color: #fff;
+  color: rgb(140, 140, 140);
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+  cursor: pointer;
+  border-radius: 0;
 }
 
 label {

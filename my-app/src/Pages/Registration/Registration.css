@@ -78,3 +78,33 @@ input {
 .wrap.dark {
   margin: 0 auto;
 }
+
+.Registration.dark {
+  background-color: black;
+}
+
+.wrapperLogin.loginlight .Registration {
+  font-size: 28px;
+  font-weight: 600;
+  background-color: #fff;
+  border: none;
+  color: rgb(140, 140, 140);
+}
+
+.wrapperLogin.logindark .Registration {
+  color: rgb(140, 140, 140);
+}
+
+.wrapperLogin.registdark .login {
+  color: rgb(140, 140, 140);
+  border-right: 4px solid red;
+}
+
+.wrapperLogin.logindark .login {
+  color: #1474ff;
+  border-right: 4px solid red;
+}
+
+/* .firstBlock label {
+  color: red;
+} */

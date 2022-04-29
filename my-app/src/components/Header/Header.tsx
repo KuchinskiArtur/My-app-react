@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./Header.css";
+
 const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
   const [userActive, setuserActive] = useState(false);
+
   return (
     <div className="cardPost">
       <div className="App">
@@ -14,7 +16,7 @@ const Header = () => {
             <span />
           </div>
           <p className="userName " onClick={() => setuserActive(!userActive)}>
-            Username
+            <i className="fa-solid fa-user"></i> Username
           </p>
         </nav>
 
@@ -25,7 +27,9 @@ const Header = () => {
             My posts
             <button className="addPost">+ Add</button>
           </p>
-          <button className="logOut">Log out</button>
+          <button className="logOut">
+            Log out <i className="fa-solid fa-arrow-right-from-bracket"></i>
+          </button>
         </div>
 
         <div className={"userLogin " + (!userActive ? "d-none" : "")}>

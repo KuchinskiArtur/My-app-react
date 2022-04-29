@@ -1,5 +1,7 @@
+import classNames from "classnames";
 import React from "react";
 import "./Registration.css";
+import { Theme, useThemeContext } from "../../context/ThemeModeContext";
 
 interface IRegistrationProps {
   isDark: boolean;
@@ -14,8 +16,19 @@ const Registration = ({
   onClick,
   error,
 }: IRegistrationProps) => {
+  const { theme, onChangeTheme = () => {} } = useThemeContext();
+
+  const isLightTheme = theme === Theme.Light;
+
+  const onClickTheme = () => {
+    onChangeTheme(Theme.Dark);
+  };
+
   return (
-    <div className="firstBlock">
+    <div
+      onClick={onClickTheme}
+      className={classNames("firstBlock", { ["darkContainer"]: !isLightTheme })}
+    >
       <div className="wrappers">
         <label htmlFor="name">Yser name</label>
         <input

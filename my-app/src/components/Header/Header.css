@@ -23,6 +23,48 @@
   margin-top: 40px;
 }
 
+nav {
+  height: 50px;
+  background-color: gray;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+}
+
+.burgerBtn {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.burgerBtn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  background-color: #1474ff;
+  height: 2px;
+}
+
+.burgerBtn::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  width: 20px;
+  background-color: #1474ff;
+  height: 2px;
+}
+
+.burgerBtn span {
+  position: absolute;
+  top: 20px;
+  width: 20px;
+  background-color: #1474ff;
+  height: 2px;
+}
+
 .contentP {
   display: flex;
   flex-direction: column;
