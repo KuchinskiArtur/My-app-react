@@ -3,43 +3,21 @@
   position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App.light {
+  text-align: center;
+  position: relative;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 5px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App.dark {
+  background-color: #000;
+  text-align: center;
+  position: relative;
+  height: 100vh;
 }
 
 .darkTheme {
-  border: none;
   background-color: #1474ff;
   color: #fff;
   border-radius: 32px;
@@ -48,45 +26,16 @@
 }
 
 .darkTheme.light {
-  position: relative;
-  left: 2%;
-  top: 10px;
+  left: 94%;
+  top: -40px;
+  z-index: 2;
 }
 
 .darkTheme.dark {
   color: #000;
-  position: relative;
-  left: 2%;
-  top: 10px;
-}
-
-.App.dark {
-  background-color: #000;
-  text-align: center;
-  position: relative;
-  min-height: 100vh;
-}
-
-.firstBlock {
-  width: 1519px;
-  height: 575px;
-}
-
-.accountLogin.dark {
-  background-color: red;
-}
-
-.wrapperLogin.registlight .login {
-  font-size: 28px;
-  font-weight: 600;
-  background-color: #fff;
-  border: none;
-  color: rgb(140, 140, 140);
-  border-right: 4px solid black;
-  border-left: none;
-  border-top: none;
-  border-bottom: none;
-  border-radius: 0px;
+  left: 94%;
+  top: -40px;
+  z-index: 2;
 }
 
 .d-none {
@@ -158,4 +107,11 @@
 
 .darkTheme.dark .toggle-circle {
   left: 40px;
+}
+
+.btnThemeWrapper {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
 }

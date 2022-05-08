@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { Dispatch, SetStateAction, useContext } from "react";
 
 export enum Theme {
   Light = "light",
@@ -6,13 +6,16 @@ export enum Theme {
 }
 
 const defaultValue = {
-  theme: Theme.Light,
+  isDark: false,
+  menu: false,
 };
 
 export type ThemeContextType = {
-  theme: Theme;
-  onChangeTheme?: (Theme: Theme) => void;
+  isDark: boolean;
+  onChangeTheme?: () => void;
   children?: any;
+  menu: boolean;
+  setMenu?: Dispatch<SetStateAction<boolean>>;
 };
 
 export const ThemeContext = React.createContext<ThemeContextType>(defaultValue);

@@ -1,20 +1,42 @@
 import "./RegistrationConfirmation.css";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { RouteAll } from "../../constants/constants";
+import { useThemeContext } from "../../context/ThemeModeContext";
 
-interface IRegistrationConfirmationProps {
-  isDark: boolean;
-  onClick: (prev: any) => void;
-}
+const RegistrationConfirmation = () => {
+  const navigate = useNavigate();
+  const [isRegistrationConfirmation, setIsRegistrationConfirmation] =
+    useState(true);
+  const home = () => {
+    navigate(`/${RouteAll.Registration}`);
 
-const RegistrationConfirmation = ({
-  isDark,
-  onClick,
-}: IRegistrationConfirmationProps) => {
+    // setIsRegistration(true);
+    // setRegistrationData({
+    //   name: "",
+    //   email: "",
+    //   password: "",
+    //   confirmPassword: "",
+    // });
+  };
+  const { isDark } = useThemeContext();
   return (
-    <div className="firstBlock">
-      <div className={"wrapperRegistration " + (isDark ? "dark" : "light")}>
+    <div
+      className={
+        "firstBlockRegistrationConfirmation " + (isDark ? "dark" : "light")
+      }
+    >
+      <div
+        className={
+          "wrapperRegistrationConfirmation " + (isDark ? "dark" : "light")
+        }
+      >
         <h1>Registration Confirmation</h1>
-        <div className={"wrapRegistration " + (isDark ? "dark" : "light")}>
+        <div
+          className={
+            "wrapRegistrationConfirmation " + (isDark ? "dark" : "light")
+          }
+        >
           <p>
             Please active your account with the activation link in the email{" "}
             <span>text@gmail.com</span>{" "}
@@ -23,7 +45,7 @@ const RegistrationConfirmation = ({
         </div>
         <button
           className={"btnRegistration " + (isDark ? "dark" : "light")}
-          onClick={onClick}
+          onClick={home}
         >
           Home
         </button>

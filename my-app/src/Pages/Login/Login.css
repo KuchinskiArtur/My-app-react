@@ -7,6 +7,10 @@
   margin: 10px auto;
 }
 
+.navbarWrap {
+  z-index: 1;
+}
+
 .wrapperLogin {
   display: flex;
   justify-content: center;
@@ -22,14 +26,9 @@
   margin-left: 10px;
   background-color: #1474ff;
   border-radius: 30px;
-  border: none;
   color: #fff;
   font-size: 15px;
   margin: 25px 0 0 10px;
-}
-
-.login.dark {
-  background-color: black;
 }
 
 .wrappers {
@@ -38,25 +37,38 @@
   align-items: center;
 }
 
-.wrapperLogin .login {
-  color: #1474ff;
-  border-right: 4px solid black;
-}
-
-.wrapperLogin.dark {
+.wrapperButtonLogin .login.dark {
   background-color: #000;
+  font-size: 28px;
+  font-weight: 600;
+  color: #1474ff;
+  border-right: 4px solid red;
+  cursor: pointer;
+  border-radius: 0;
+  width: 120px;
 }
 
-.login {
+.wrapperButtonLogin .login.light {
   font-size: 28px;
   font-weight: 600;
   background-color: #fff;
-  color: rgb(140, 140, 140);
-  border-left: none;
-  border-top: none;
-  border-bottom: none;
+  color: #1474ff;
+  border-right: 4px solid black;
   cursor: pointer;
   border-radius: 0;
+  width: 120px;
+}
+
+.wrapperButtonLogin .Registration {
+  margin-bottom: 10px;
+  color: rgb(140, 140, 140);
+  font-size: 28px;
+  font-weight: 600;
+  background: #fff;
+  border: none;
+  cursor: progress;
+  width: 170px;
+  margin-left: 15px;
 }
 
 label {
@@ -97,5 +109,12 @@ input {
 
 .textForgot.dark {
   color: #fff;
-  margin-bottom: 238px;
+}
+
+.accountLogin.dark {
+  background-color: red;
+}
+
+.firstBlockLogin {
+  height: 100vh;
 }

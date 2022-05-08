@@ -22,12 +22,12 @@ h1 {
   color: #1474ff;
   font-size: 36px;
   margin: 0 auto;
+  padding-top: 40px;
 }
 
 p {
   width: 436px;
   font-size: 22px;
-  margin: 0 auto 40px;
 }
 
 button {
@@ -45,12 +45,27 @@ button {
   margin: 0 auto;
 }
 
+.wrap.dark {
+  width: 80px;
+  margin: 40px auto;
+}
+
+.wrap.light p {
+  width: 80px;
+  margin: 40px auto;
+  color: #000;
+}
+
 .wrap.dark p {
-  color: #1474ff;
+  color: #fff;
 }
 
 .btnTemplate.dark {
   background-color: red;
   color: #fff;
-  margin-bottom: 357px;
+}
+
+.firstBlockTemplate.dark {
+  height: 100vh;
+  background-color: black;
 }

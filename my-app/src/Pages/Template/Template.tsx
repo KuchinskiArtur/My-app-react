@@ -1,14 +1,24 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { RouteAll } from "../../constants/constants";
+import { useThemeContext } from "../../context/ThemeModeContext";
 import "./Template.css";
 
-interface templateProps {
-  isDark: boolean;
-  onClick: (prev: any) => void;
-}
+const Template = () => {
+  const navigate = useNavigate();
+  const [isTemplate, setIsTemplate] = useState(true);
 
-const RegistrationConfirmation = ({ isDark, onClick }: templateProps) => {
+  const about = () => {
+    navigate(`/${RouteAll.Login}`);
+    // setIsLogin(true);
+    // setLoginData({
+    //   email: "",
+    //   password: "",
+    // });
+  };
+  const { isDark } = useThemeContext();
   return (
-    <div className="firstBlock">
+    <div className={"firstBlockTemplate " + (isDark ? "dark" : "light")}>
       <div className={"wrapper-template " + (isDark ? "dark" : "light")}>
         <h1>Template title</h1>
         <div className={"wrap " + (isDark ? "dark" : "light")}>
@@ -16,7 +26,7 @@ const RegistrationConfirmation = ({ isDark, onClick }: templateProps) => {
         </div>
         <button
           className={"btnTemplate " + (isDark ? "dark" : "light")}
-          onClick={onClick}
+          onClick={about}
         >
           button
         </button>
@@ -25,4 +35,4 @@ const RegistrationConfirmation = ({ isDark, onClick }: templateProps) => {
   );
 };
 
-export default RegistrationConfirmation;
+export default Template;

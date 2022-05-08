@@ -8,7 +8,7 @@ import "./Post.css";
 //   date: string;
 // }
 
-const Post = ({ img, header, description, date }: any) => {
+const Post = ({ img, header, description, date, deletePost, id }: any) => {
   return (
     <div>
       <div className="userName">
@@ -23,6 +23,9 @@ const Post = ({ img, header, description, date }: any) => {
           <h1>{header}</h1>
           <p>{description}</p>
           <span>{date}</span>
+          <button className="btnDelete" onClick={() => deletePost(id)}>
+            Delete
+          </button>
         </div>
       </div>
     </div>
