@@ -101,7 +101,9 @@ const Registration = () => {
             }
           />
           {error === "wrong_email" && (
-            <div>Email введен некоректно. Пожалуйста исправьте</div>
+            <div className={"errorMessage " + (isDark ? "dark" : "light")}>
+              Email введен некоректно. Пожалуйста исправьте
+            </div>
           )}
           <label htmlFor="Password">Password</label>
           <input
@@ -126,9 +128,15 @@ const Registration = () => {
             }
           />
           {error === "wrong_confirm_password" && (
-            <div>Пароли несовпадают. Пожалуйста исправьте</div>
+            <div className={"errorMessage " + (isDark ? "dark" : "light")}>
+              Пароли несовпадают. Пожалуйста исправьте
+            </div>
           )}
-          {error === "wrong_field" && <div>Одно из полей незаполнено.</div>}
+          {error === "wrong_field" && (
+            <div className={"errorMessage " + (isDark ? "dark" : "light")}>
+              Одно из полей незаполнено.
+            </div>
+          )}
           <button
             className={"accountLogin " + (isDark ? "dark" : "light")}
             onClick={registration}

@@ -6,8 +6,6 @@ import { useThemeContext } from "../../context/ThemeModeContext";
 
 const Header = () => {
   const [menuActive, setMenuActive] = useState("");
-  const [userActive, setuserActive] = useState(false);
-  const [navbarActive, setNavbarActive] = useState(false);
   const { isDark, onChangeTheme } = useThemeContext();
   const { menu, setMenu } = useThemeContext();
   const onClick = onChangeTheme ? onChangeTheme : () => {};

@@ -2,7 +2,7 @@ import React from "react";
 import "./Post.css";
 
 // interface PostProps {
-//   img?: object;
+//   img?: string;
 //   header: string;
 //   description: string;
 //   date: string;

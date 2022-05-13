@@ -77,6 +77,9 @@ const Login = () => {
               }))
             }
           />
+          {/* {error === "wrong_email" && (
+            <div>Email введен некоректно. Пожалуйста проверьте</div>
+          )} */}
           <label htmlFor="Password">Password</label>
           <input
             type="password"
@@ -87,6 +90,16 @@ const Login = () => {
               }))
             }
           />
+          {error === "empty_field" && (
+            <div className={"errorMessage " + (isDark ? "dark" : "light")}>
+              Одно из полей не заполнено. Пожалуйста проверьте
+            </div>
+          )}
+          {error === "not_existent_account" && (
+            <div className={"errorMessage " + (isDark ? "dark" : "light")}>
+              Такого аккаунта не существует. Пожалуйста пройдите регистрацию
+            </div>
+          )}
           <button
             className={"accountLogin " + (isDark ? "dark" : "light")}
             onClick={submit}

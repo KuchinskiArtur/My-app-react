@@ -118,3 +118,7 @@ input {
 .firstBlockLogin {
   height: 100vh;
 }
+
+.errorMessage.dark {
+  color: #fff;
+}
