@@ -226,15 +226,20 @@ stringName(users);
 
 // 2. Посчитать общее количнство машин у пользователей
 
-// type GetNumberCar = (item: User[]) => number;
+type GetNumberCar = (item: User[]) => number;
 
-// const getNumberCar: GetNumberCar = (users) => {
-//   let result = 0
-//   if(item.cars) {
-//     result++
-//   }
-// };
+const getNumberCar: GetNumberCar = (users) => {
+  let cars = [];
+  users.forEach((item) => {
+    if (item.cars) {
+      item.cars.forEach((car) => cars.push(car));
+    }
+  });
+  let car = cars.length;
+  return car;
+};
 
+getNumberCar(users);
 // 3. Создать функцию, которая бы принимала массив пользователей и отфильтровывала пользователей на наличие образования
 
 type FilterUserHasEducation = (item: User[]) => User[];
