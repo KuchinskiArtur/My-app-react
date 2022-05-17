@@ -51,18 +51,18 @@ button {
 }
 
 .wrapRegistration.light {
-  margin: 50px auto;
+  margin: 20px auto;
 }
 
 .wrapRegistration.dark {
-  margin: 50px auto;
+  margin: 20px auto;
 }
 
 .wrapperRegistration.dark h1 {
   color: red;
 }
 
-.wrapRegistration.dark p {
+.wrapRegistrationConfirmarion.dark p {
   color: #fff;
 }
 
@@ -73,5 +73,51 @@ button {
 .btnRegistration.dark {
   background-color: red;
   color: black;
-  margin: 0 0 420px 0;
+  margin: 0 auto;
+}
+
+.firstBlockRegistrationConfirmation.dark {
+  background-color: black;
+  height: 100vh;
+  display: block;
+  color: #fff;
+}
+
+.firstBlockRegistrationConfirmation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.firstBlockRegistrationConfirmation .wrapperRegistrationConfirmation {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapperRegistrationConfirmation p {
+  font-size: 12px;
+  width: 235px;
+}
+
+.wrapRegistrationConfirmation {
+  margin: 40px auto;
+}
+
+.wrapRegistration {
+  width: 190px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.wrapRegistration p {
+  width: 152px;
+  font-size: 12px;
+}
+
+.wrapRegistration button {
+  width: 40px;
 }

@@ -1,0 +1,30 @@
+.information {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 50px;
+}
+
+h1 {
+  color: #1474ff;
+}
+
+.wrapperBtnTab {
+  display: flex;
+  gap: 20px;
+}
+
+.wrapperBtnTab button {
+  width: 60px;
+  height: 32px;
+  background-color: #1474ff;
+  border: none;
+  border-radius: 40%;
+  color: #fff;
+}
+
+p {
+  text-align: justify;
+  width: 900px;
+  /* background: lemonchiffon; */
+}

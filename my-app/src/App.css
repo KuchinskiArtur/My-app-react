@@ -3,150 +3,115 @@
   position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App.light {
+  text-align: center;
+  position: relative;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 5px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App.dark {
+  background-color: #000;
+  text-align: center;
+  position: relative;
+  height: 100vh;
 }
 
 .darkTheme {
-  border: none;
   background-color: #1474ff;
   color: #fff;
   border-radius: 32px;
   height: 30px;
   width: 64px;
-  margin: 20px 1400px 0 0;
+}
+
+.darkTheme.light {
+  left: 94%;
+  top: -40px;
+  z-index: 2;
 }
 
 .darkTheme.dark {
-  background-color: red;
   color: #000;
-}
-
-.App.dark {
-  background-color: #000;
-}
-
-.accountLogin {
-  width: 302px;
-  height: 60px;
-  margin-left: 10px;
-  background-color: #1474ff;
-  border-radius: 30px;
-  border: none;
-  margin-top: 15px;
-  color: #fff;
-  font-size: 15px;
-  margin: 25px 0 0 10px;
-}
-
-.accountLogin.dark {
-  background-color: red;
-}
-
-.wrapperLogin .login {
-  color: #1474ff;
-  border-right: 4px solid black;
-}
-
-.login {
-  font-size: 28px;
-  font-weight: 600;
-  background-color: #fff;
-  color: rgb(140, 140, 140);
-  border-left: none;
-  border-top: none;
-  border-bottom: none;
-  cursor: pointer;
-  border-radius: 0;
-}
-
-.wrapperLogin.dark {
-  background-color: #000;
-}
-
-.login.dark {
-  background-color: black;
-}
-
-.Registration.dark {
-  background-color: black;
-}
-
-.wrapperLogin {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  width: 300px;
-  margin: 0 auto;
-  gap: 10px;
-}
-
-.wrapperLogin.loginlight .Registration {
-  font-size: 28px;
-  font-weight: 600;
-  background-color: #fff;
-  border: none;
-  color: rgb(140, 140, 140);
-}
-
-.wrapperLogin.logindark .Registration {
-  color: rgb(140, 140, 140);
-}
-
-.wrapperLogin.registlight .login {
-  font-size: 28px;
-  font-weight: 600;
-  background-color: #fff;
-  border: none;
-  color: rgb(140, 140, 140);
-  border-right: 4px solid black;
-  border-left: none;
-  border-top: none;
-  border-bottom: none;
-  border-radius: 0px;
-}
-
-.wrapperLogin.registdark .login {
-  color: rgb(140, 140, 140);
-  border-right: 4px solid red;
-}
-
-.wrapperLogin.logindark .login {
-  color: #1474ff;
-  border-right: 4px solid red;
+  left: 94%;
+  top: -40px;
+  z-index: 2;
 }
 
 .d-none {
   display: none !important;
+}
+
+.toggle {
+  touch-action: pan-x;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.toggle-input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.toggle-check,
+.toggle-uncheck {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 0;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.toggle-container {
+  width: 64px;
+  height: 30px;
+  padding: 0;
+  border-radius: 30px;
+  background-color: #4d4d4d;
+  transition: all 0.2s ease;
+}
+
+.toggle-circle {
+  position: absolute;
+  top: 4px;
+  left: 1px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #4d4d4d;
+  border-radius: 50%;
+  background-color: #fafafa;
+  box-sizing: border-box;
+  transition: all 1.25s ease;
+}
+
+.darkTheme.dark .toggle-circle {
+  left: 40px;
+}
+
+.btnThemeWrapper {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
 }

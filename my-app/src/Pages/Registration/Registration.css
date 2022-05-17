@@ -1,0 +1,155 @@
+.wrappers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(140, 140, 140);
+  margin-right: 190px;
+}
+
+.confirm {
+  margin-right: 9%;
+}
+
+input {
+  color: #1474ff;
+  width: 244px;
+  height: 60px;
+  margin-left: 10px;
+  border: 1px solid #1474ff;
+  padding-left: 3%;
+  font-size: 24px;
+  border-radius: 30px;
+}
+
+.wrapperButtonRegistration .login {
+  font-size: 28px;
+  font-weight: 600;
+  background-color: #fff;
+  color: rgb(140, 140, 140);
+  border-right: 4px solid black;
+  cursor: pointer;
+  border-radius: 0;
+  width: 120px;
+}
+
+.wrapperButtonRegistration .Registration {
+  margin-bottom: 10px;
+  color: #1474ff;
+  font-size: 28px;
+  font-weight: 600;
+  background: #fff;
+  border: none;
+  cursor: progress;
+  width: 170px;
+  margin-left: 15px;
+}
+
+.wrapperButtonRegistration .login.dark {
+  background-color: #000;
+  font-size: 28px;
+  font-weight: 600;
+  color: rgb(140, 140, 140);
+  border-right: 4px solid red;
+  cursor: pointer;
+  border-radius: 0;
+  width: 120px;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 40px;
+}
+
+.wrappers.dark {
+  background-color: black;
+}
+
+.wrap h1 {
+  font-size: 12px;
+}
+
+.wrap p {
+  font-size: 12px;
+  width: 152px;
+}
+
+.wrap button {
+  width: 30px;
+}
+
+.lastLogin {
+  border: none;
+  color: #1474ff;
+  background-color: #fff;
+  font-weight: bold;
+  padding: 0px;
+  cursor: pointer;
+}
+
+.lastLogin.dark {
+  background-color: black;
+  color: aqua;
+}
+
+.wrap.dark {
+  margin: 0 auto;
+}
+
+.Registration.dark {
+  background-color: black;
+}
+
+.wrapperLogin.loginlight .Registration {
+  font-size: 28px;
+  font-weight: 600;
+  background-color: #fff;
+  border: none;
+  color: rgb(140, 140, 140);
+}
+
+.wrapperLogin.logindark .Registration {
+  color: rgb(140, 140, 140);
+}
+
+.wrapperLogin.registdark .login {
+  color: rgb(140, 140, 140);
+  border-right: 4px solid red;
+}
+
+.wrapperLogin.logindark .login {
+  color: #1474ff;
+  border-right: 4px solid red;
+}
+
+.wrapRegistration {
+  width: 190px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.wrapRegistration p {
+  width: 152px;
+  font-size: 12px;
+}
+
+.wrapRegistration.dark {
+  color: #fff;
+}
+
+.wrapRegistration button {
+  width: 40px;
+}
+
+.errorMessage.dark {
+  color: #fff;
+}

@@ -1,6 +1,5 @@
 * {
   margin: 0;
-  text-align: start;
 }
 .App .App {
   width: 330px;
@@ -25,17 +24,12 @@
 .content p {
   font-size: 28px;
   color: #1474ff;
-}
-
-.userName span {
-  font-size: 18px;
-  color: #1474ff;
-  font-weight: 400;
+  margin: unset;
 }
 
 .image {
   width: 300px;
-  height: 200px;
+  height: 170px;
   border-radius: 4px;
   margin-top: 4px;
 }
@@ -57,4 +51,11 @@
 
 .wrapperPost {
   width: 300px;
+}
+
+.btnDelete {
+  width: 50px;
+  height: 30px;
+  margin-left: 180px;
+  cursor: pointer;
 }

@@ -1,0 +1,136 @@
+.userName {
+  position: absolute;
+  left: 8rem;
+  top: 6px;
+  color: #1474ff;
+  cursor: pointer;
+}
+
+.contents {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+  background-color: #1474ff;
+  height: 60px;
+  gap: 60px;
+  min-width: 100%;
+  position: relative;
+}
+
+.contents h1 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 40px;
+}
+
+nav {
+  height: 50px;
+  background-color: #d0d0d0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+nav.dark {
+  background-color: black;
+}
+
+.burgerBtn {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.burgerBtn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  background-color: #1474ff;
+  height: 2px;
+}
+
+.burgerBtn::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  width: 20px;
+  background-color: #1474ff;
+  height: 2px;
+}
+
+.burgerBtn span {
+  position: absolute;
+  top: 20px;
+  width: 20px;
+  background-color: #1474ff;
+  height: 2px;
+}
+
+.addPost {
+  background-color: #1474ff;
+  border: none;
+  color: #fff;
+  margin: 5px 24px 0 0;
+  cursor: pointer;
+}
+
+.logOut {
+  background-color: #1474ff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  width: 80px;
+  height: 30px;
+}
+
+.done {
+  left: 10rem;
+  top: 1rem;
+  background-color: #1474ff;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: black;
+}
+
+.userLogin {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+  background-color: #1474ff;
+  max-width: 1519px;
+  width: 100%;
+  position: relative;
+}
+
+.userWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 1000px 0 0;
+  align-items: baseline;
+}
+
+.userWrap button {
+  background-color: #1474ff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.navbarWrap {
+  position: relative;
+}
+
+.done {
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
