@@ -2,17 +2,25 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { RouteAll } from "../../constants/constants";
 import { useThemeContext } from "../../context/ThemeModeContext";
-import Template from "../Template";
+import { useDispatch, useSelector } from "react-redux";
 
 import "./Login.css";
 
 const Login = () => {
   const navigate = useNavigate();
 
-  const [isLogin, setIsLogin] = useState(true);
   const [isLoginPage, setIsLoginPage] = useState(true);
   const [loginData, setLoginData] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
+
+  // const dispatch = useDispatch();
+  // const value = useSelector((state: any) => state.value);
+
+  // const onClick = (isPlus: boolean) => {
+  //   const PLUS_ACTION = { type: "counter/incremented" };
+  //   const MINUS_ACTION = { type: "counter/decremented" };
+  //   dispatch(isPlus ? PLUS_ACTION : MINUS_ACTION);
+  // };
 
   const submit = () => {
     if (!loginData.email || !loginData.password) {
@@ -77,9 +85,6 @@ const Login = () => {
               }))
             }
           />
-          {/* {error === "wrong_email" && (
-            <div>Email введен некоректно. Пожалуйста проверьте</div>
-          )} */}
           <label htmlFor="Password">Password</label>
           <input
             type="password"
@@ -113,6 +118,13 @@ const Login = () => {
             <h1>Reset password</h1>
           </div>
         </div>
+        {/* <button className="btnPlus" onClick={() => onClick(true)}>
+          плюс
+        </button>
+        <button className="btnMinus" onClick={() => onClick(false)}>
+          минус
+        </button>
+        <div style={{ fontSize: 20 }}>{value}</div> */}
       </div>
     </div>
   );

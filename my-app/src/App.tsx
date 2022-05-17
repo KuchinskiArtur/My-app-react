@@ -10,6 +10,8 @@ import { ThemeModeProvider } from "./context/ThemeModeProvider";
 import { Theme } from "./context/ThemeModeContext";
 import Information from "./Pages/Information/Information";
 import Router from "./Pages/Router";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -20,14 +22,16 @@ function App() {
   };
 
   return (
-    <ThemeModeProvider
-      menu={menu}
-      setMenu={setMenu}
-      isDark={isDark}
-      onChangeTheme={onChangeTheme}
-    >
-      <Router />
-    </ThemeModeProvider>
+    <Provider store={store}>
+      <ThemeModeProvider
+        menu={menu}
+        setMenu={setMenu}
+        isDark={isDark}
+        onChangeTheme={onChangeTheme}
+      >
+        <Router />
+      </ThemeModeProvider>
+    </Provider>
   );
 }
 
