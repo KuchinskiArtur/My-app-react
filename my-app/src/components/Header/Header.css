@@ -11,7 +11,7 @@
   align-items: baseline;
   justify-content: space-evenly;
   background-color: #1474ff;
-  height: 60px;
+  height: 70px;
   gap: 60px;
   min-width: 100%;
   position: relative;
@@ -77,6 +77,12 @@ nav.dark {
   color: #fff;
   margin: 5px 24px 0 0;
   cursor: pointer;
+}
+
+.wrapCardList {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
 .logOut {

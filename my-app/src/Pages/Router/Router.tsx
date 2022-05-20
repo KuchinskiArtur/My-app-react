@@ -1,6 +1,6 @@
-import React, { useState } from "react";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import Header from "../../components/Header/Header";
+import PostsOne from "../../components/PostsOne";
 import { RouteAll } from "../../constants/constants";
 import Post from "../AllPost/Posts";
 import Posts from "../AllPost/Posts";
@@ -16,6 +16,7 @@ const router = () => {
       <Routes>
         <Route path="/" element={<Header />}>
           <Route path={`/${RouteAll.AllCard}`} element={<Posts />} />
+          <Route path={`/${RouteAll.Card}`} element={<PostsOne />} />
           <Route path={`/${RouteAll.Info}`} element={<Information />} />
           <Route path={`/${RouteAll.Card}`} element={<Post />} />
           <Route path={`/${RouteAll.Login}`} element={<Login />} />

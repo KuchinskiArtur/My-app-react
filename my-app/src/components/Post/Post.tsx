@@ -1,19 +1,28 @@
 import React from "react";
 import "./Post.css";
+import Popup from "reactjs-popup";
 
-// interface PostProps {
-//   img?: string;
-//   header: string;
-//   description: string;
-//   date: string;
-// }
+interface PostProps {
+  img?: string;
+  header: string;
+  description: string;
+  date: string;
+  deletePost?: any;
+  id?: number;
+  onClick?: () => void;
+}
 
-const Post = ({ img, header, description, date, deletePost, id }: any) => {
+const Post = ({
+  img,
+  header,
+  description,
+  date,
+  deletePost,
+  id,
+  onClick,
+}: PostProps) => {
   return (
-    <div>
-      <div className="userName">
-        <span>Username</span>
-      </div>
+    <div className="CardOne" onClick={onClick}>
       <div className="content">
         <p>Content title</p>
       </div>
@@ -23,6 +32,16 @@ const Post = ({ img, header, description, date, deletePost, id }: any) => {
           <h1>{header}</h1>
           <p>{description}</p>
           <span>{date}</span>
+          <Popup
+            trigger={
+              <button className="checkImage">
+                <i className="fa-solid fa-eye"></i>
+              </button>
+            }
+            position={"top center"}
+          >
+            <img className="imgSize" src={img} alt="" />
+          </Popup>
           <button className="btnDelete" onClick={() => deletePost(id)}>
             Delete
           </button>

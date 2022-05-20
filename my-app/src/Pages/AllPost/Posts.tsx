@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import Post from "../../components/Post";
 import "./Posts.css";
+import { Card as CardType } from "../../common/types";
+import { useSelector, useDispatch } from "react-redux";
+import { PostsSelectors } from "../../redux/reducers/postsReducer";
+import { setSelectedPost } from "../../redux/reducers/postsReducer";
 
 const array = [
   {
@@ -55,6 +59,14 @@ const CardPost = () => {
     setPost((prev) => prev.filter((item) => item.id !== id));
   };
 
+  const selectedCard = useSelector(PostsSelectors.getSelectedPost);
+
+  const dispatch = useDispatch();
+
+  const onCardClick = (item: CardType) => {
+    dispatch(setSelectedPost(item));
+  };
+
   return (
     <div className="cardPost">
       <div className="Header">
@@ -63,8 +75,13 @@ const CardPost = () => {
           <button className="addPost" onClick={addPost}>
             + Add
           </button>
+          {/* {selectedCard && (
+            <div style={{ background: "red", padding: "10px" }}>
+              <Post {...selectedCard} />
+            </div>
+          )} */}
         </div>
-        {post.map((item) => (
+        {post.map((item: CardType) => (
           <Post
             id={item.id}
             key={item.id}
@@ -73,6 +90,7 @@ const CardPost = () => {
             description={item.description}
             date={item.date}
             deletePost={deletePost}
+            onClick={() => onCardClick(item)}
           ></Post>
         ))}
       </div>

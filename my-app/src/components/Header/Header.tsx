@@ -47,8 +47,10 @@ const Header = () => {
             <button className="done" onClick={() => setMenuActive("")}>
               x
             </button>
-
-            <NavLink to="cards-list">All posts</NavLink>
+            <div className="wrapCardList">
+              <NavLink to="cards-list">All posts</NavLink>
+              <NavLink to="card">Add posts</NavLink>
+            </div>
             <NavLink to="information">Information</NavLink>
             <button className="logOut" onClick={deleteAccount}>
               Log out <i className="fa-solid fa-arrow-right-from-bracket"></i>
