@@ -6,6 +6,8 @@ export type Card = {
   id: number;
   likeStatus?: string;
   saved?: boolean;
+  addPost?: any;
+  deletePost?: any;
 };
 
 export enum Theme {
