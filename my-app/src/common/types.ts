@@ -4,4 +4,11 @@ export type Card = {
   description: string;
   date: string;
   id: number;
+  likeStatus?: string;
+  saved?: boolean;
 };
+
+export enum Theme {
+  like = "Like",
+  Dislike = "Dislike",
+}

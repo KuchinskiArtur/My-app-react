@@ -7,20 +7,20 @@ import { useDispatch, useSelector } from "react-redux";
 
 const Header = () => {
   const [menuActive, setMenuActive] = useState("");
-  // const { isDark, onChangeTheme } = useThemeContext();
+  const { isDark, onChangeTheme } = useThemeContext();
   const { menu, setMenu } = useThemeContext();
-  // const onClick = onChangeTheme ? onChangeTheme : () => {};
+  const onClick = onChangeTheme ? onChangeTheme : () => {};
   const btnActive = () => {
     setMenuActive(!menuActive ? "user" : "");
     if (setMenu) setMenu(!menu);
   };
 
   const dispatch = useDispatch();
-  const isDark = useSelector((state: any) => state.isDark);
+  // const isDark = useSelector((state: any) => state.isDark);
 
-  const onClick = () => {
-    dispatch({ type: "changeTheme" });
-  };
+  // const onClick = () => {
+  //   dispatch({ type: "changeTheme" });
+  // };
 
   const deleteAccount = () => {
     localStorage.removeItem("currentUser");
