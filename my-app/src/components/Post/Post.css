@@ -10,15 +10,16 @@
 }
 
 .block {
-  width: 100%;
-  max-height: 100%;
+  width: 350px;
+  height: 308px;
+  margin: 5px;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 10px;
-  border-radius: 8px;
-  border: 1px solid;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 4px;
 }
 
 .content p {
@@ -36,10 +37,13 @@
 
 .wrapperPost h1 {
   font-size: 18px;
+  font-weight: 400;
+  color: black;
 }
 
 .wrapperPost p {
   font-size: 12px;
+  color: black;
   margin: 10px 0px 24px 0px;
 }
 
@@ -53,9 +57,84 @@
   width: 300px;
 }
 
+.checkImage {
+  width: 50px;
+  height: 30px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.wrapperPost .checkImage {
+  width: 50px;
+  height: 30px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.CardOne .content p {
+  font-weight: normal;
+  color: black;
+}
+
+.CardOne {
+  margin-left: 30px;
+}
+
+.wrapperPost .btnDelete {
+  width: 50px;
+  height: 30px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
 .btnDelete {
   width: 50px;
   height: 30px;
-  margin-left: 180px;
+  margin-left: 8px;
   cursor: pointer;
+}
+
+.block button {
+  width: 30px;
+  height: 30px;
+  margin-left: 3px;
+}
+
+.popup-content {
+  margin: auto;
+  background: rgb(255, 255, 255);
+  width: 10%;
+  padding: 5px;
+}
+.popup-arrow {
+  color: rgb(255, 255, 255);
+}
+[role="tooltip"].popup-content {
+  width: 23%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+}
+
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+[data-popup="tooltip"].popup-overlay {
+  background: transparent;
+}
+
+.popup-root {
+  left: 500px;
+}
+
+.imgSize {
+  width: 350px;
+  height: 230px;
+}
+
+.btnLike {
+  background-color: red;
+}
+
+.btnClose {
+  width: 30px;
+  height: 30px;
 }

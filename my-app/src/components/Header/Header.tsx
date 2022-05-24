@@ -7,20 +7,20 @@ import { useDispatch, useSelector } from "react-redux";
 
 const Header = () => {
   const [menuActive, setMenuActive] = useState("");
-  // const { isDark, onChangeTheme } = useThemeContext();
+  const { isDark, onChangeTheme } = useThemeContext();
   const { menu, setMenu } = useThemeContext();
-  // const onClick = onChangeTheme ? onChangeTheme : () => {};
+  const onClick = onChangeTheme ? onChangeTheme : () => {};
   const btnActive = () => {
     setMenuActive(!menuActive ? "user" : "");
     if (setMenu) setMenu(!menu);
   };
 
   const dispatch = useDispatch();
-  const isDark = useSelector((state: any) => state.isDark);
+  // const isDark = useSelector((state: any) => state.isDark);
 
-  const onClick = () => {
-    dispatch({ type: "changeTheme" });
-  };
+  // const onClick = () => {
+  //   dispatch({ type: "changeTheme" });
+  // };
 
   const deleteAccount = () => {
     localStorage.removeItem("currentUser");
@@ -47,8 +47,10 @@ const Header = () => {
             <button className="done" onClick={() => setMenuActive("")}>
               x
             </button>
-
-            <NavLink to="cards-list">All posts</NavLink>
+            <div className="wrapCardList">
+              <NavLink to="cards-list">All posts</NavLink>
+              <NavLink to="card">Add posts</NavLink>
+            </div>
             <NavLink to="information">Information</NavLink>
             <button className="logOut" onClick={deleteAccount}>
               Log out <i className="fa-solid fa-arrow-right-from-bracket"></i>

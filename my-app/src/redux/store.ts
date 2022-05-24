@@ -1,8 +1,11 @@
 import {
   legacy_createStore as createStore,
-  combineReducers,
   compose,
+  combineReducers,
 } from "redux";
+import { configureStore } from "@reduxjs/toolkit";
+import authReducer from "./reducers/authReducer";
+import postsReducer from "./reducers/postsReducer";
 
 declare global {
   interface Window {
@@ -37,4 +40,11 @@ function counterReducer(state = defoultState, action: any) {
   }
 }
 
-export const store = createStore(counterReducer);
+const reducer = combineReducers({
+  posts: postsReducer,
+  auth: authReducer,
+});
+
+export const store = configureStore({
+  reducer,
+});
