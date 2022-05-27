@@ -4,12 +4,16 @@ import "./Registration.css";
 import { Theme, useThemeContext } from "../../context/ThemeModeContext";
 import { useNavigate } from "react-router-dom";
 import { RouteAll } from "../../constants/constants";
+import { useDispatch } from "react-redux";
+import { registerUser } from "../.././redux/reducers/authReducer";
 
 interface IRegistrationProps {
   error: boolean;
 }
 
 const Registration = () => {
+  const dispatch = useDispatch();
+
   const submitLoginForm = () => {
     navigate(`/${RouteAll.Login}`);
   };
@@ -61,6 +65,13 @@ const Registration = () => {
     } else {
       localStorage.setItem("accounts", JSON.stringify([registrationData]));
     }
+    dispatch(
+      registerUser({
+        name: registrationData.name,
+        password: registrationData.password,
+        email: registrationData.email,
+      })
+    );
     return navigate(`/${RouteAll.RegistrationConfirmation}`);
   };
 

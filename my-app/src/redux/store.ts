@@ -6,6 +6,9 @@ import {
 import { configureStore } from "@reduxjs/toolkit";
 import authReducer from "./reducers/authReducer";
 import postsReducer from "./reducers/postsReducer";
+import createSagaMiddleware from "redux-saga";
+import { applyMiddleware } from "redux";
+import rootSaga from "./sagas/rootSaga";
 
 declare global {
   interface Window {
@@ -18,6 +21,8 @@ interface iDefoultState {
   value: number;
   isDark: boolean;
 }
+
+const sagaMiddleware = createSagaMiddleware();
 
 const defoultState: iDefoultState = { value: 0, isDark: false };
 
@@ -45,6 +50,12 @@ const reducer = combineReducers({
   auth: authReducer,
 });
 
-export const store = configureStore({
-  reducer,
-});
+// export const store = configureStore({
+//   reducer,
+//   middleware: [sagaMiddleware],
+// });
+// sagaMiddleware.run(rootSaga);
+
+export const store = createStore(reducer, applyMiddleware(sagaMiddleware));
+
+sagaMiddleware.run(rootSaga);

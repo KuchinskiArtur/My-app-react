@@ -19,6 +19,8 @@ const postSlice = createSlice({
       state.selectedPost = action.payload;
     },
     loadData: (state, action) => {
+      console.log(action);
+
       state.cardList = action.payload.map((cards: Card) => {
         return {
           ...cards,
@@ -37,10 +39,10 @@ const postSlice = createSlice({
         }
       }
     },
-
-    // setSavePost: (state, action) => {}
   },
 });
+
+export const FETCH_POSTS = "FETCH_POSTS";
 
 export const { setSelectedPost, loadData, setLikePost } = postSlice.actions;
 
@@ -52,14 +54,24 @@ export const PostsSelectors = {
     const cards = state.posts.cardList;
     switch (filters) {
       case "like":
-        return cards;
+        return cards.filter((item: any) => item.likeStatus === "like");
       case "dislike":
-        return cards;
-      case "saved":
-        return cards;
+        return cards.filter((item: any) => item.likeStatus === "dislike");
+      case "save":
+        return cards.filter((item: any) => item.saved);
       case "all":
+        return cards;
       default:
         return cards;
     }
   },
+};
+
+export const setUsers = (payload: any) => {
+  loadData({ type: "posts/loadData", payload });
+  return { type: "loadData", payload };
+};
+
+export const fetchPosts = () => {
+  return { type: FETCH_POSTS };
 };

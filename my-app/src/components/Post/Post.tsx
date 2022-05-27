@@ -38,6 +38,17 @@ const Post = ({
     }
   };
 
+  const CloseButton: any = (close: any) => {
+    return (
+      <div className="wrapperPopup">
+        <button className="btnClose" onClick={close}>
+          x
+        </button>
+        <img className="imgSize" src={img} alt="" />
+      </div>
+    );
+  };
+
   return (
     <div className="CardOne" onClick={onClick}>
       <div className="content">
@@ -56,10 +67,8 @@ const Post = ({
               </button>
             }
             position="top left"
-          >
-            <button className="btnClose">x</button>
-            <img className="imgSize" src={img} alt="" />
-          </Popup>
+            children={CloseButton}
+          />
           <button
             className={likeStatus === "like" ? "btnLike" : ""}
             onClick={() => handleButtonClick("like")}

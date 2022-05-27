@@ -15,7 +15,7 @@
 }
 
 .block {
-  width: 350px;
+  width: 310px;
   height: 308px;
   margin: 5px;
   background-color: #fff;
@@ -43,12 +43,16 @@
 .wrapAddPost {
   display: flex;
   gap: 15px;
-  width: 100%;
+  width: 100px;
   color: #1474ff;
   align-items: center;
   max-width: 1100px;
-  width: 100%;
-  margin-left: 31px;
+  display: block;
+  margin: 35px 0px 0px 10px;
+}
+
+.wrapAddPost button {
+  margin-top: 10px;
 }
 
 .wrapAddPost p {

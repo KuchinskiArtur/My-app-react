@@ -3,7 +3,11 @@ import Post from "../../components/Post";
 import "./Posts.css";
 import { Card as CardType } from "../../common/types";
 import { useSelector, useDispatch } from "react-redux";
-import { loadData, PostsSelectors } from "../../redux/reducers/postsReducer";
+import {
+  fetchPosts,
+  loadData,
+  PostsSelectors,
+} from "../../redux/reducers/postsReducer";
 import { setSelectedPost } from "../../redux/reducers/postsReducer";
 
 const array = [
@@ -39,7 +43,7 @@ const array = [
 
 const CardPost = () => {
   const [post, setPost] = useState(array);
-
+  const [activeTab, setActiveTab] = useState("all");
   const addPost = () => {
     setPost((prev) => {
       return [
@@ -61,7 +65,9 @@ const CardPost = () => {
 
   const selectedCard = useSelector(PostsSelectors.getSelectedPost);
 
-  const cardList = useSelector((state) => PostsSelectors.getCards(state, ""));
+  const cardList = useSelector((state) =>
+    PostsSelectors.getCards(state, activeTab)
+  );
 
   const dispatch = useDispatch();
 
@@ -75,13 +81,29 @@ const CardPost = () => {
 
   // console.log(cardList);
 
+  const x = (tab: any) => {
+    setActiveTab(tab);
+  };
+
   return (
     <div className="cardPost">
       <div className="Header">
         <div className="wrapAddPost">
           <p>My posts</p>
-          <button className="addPost" onClick={addPost}>
+          <button className="addPost" onClick={() => dispatch(fetchPosts())}>
             + Add
+          </button>
+          <button className="like" onClick={() => x("like")}>
+            <i className="fa-solid fa-thumbs-up"></i>
+          </button>
+          <button className="dislike" onClick={() => x("dislike")}>
+            <i className="fa-solid fa-thumbs-down"></i>
+          </button>
+          <button className="save" onClick={() => x("save")}>
+            <i className="fa-solid fa-bookmark"></i>
+          </button>
+          <button className="all" onClick={() => x("all")}>
+            all
           </button>
           {/* {selectedCard && (
             <div style={{ background: "red", padding: "10px" }}>

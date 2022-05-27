@@ -9,8 +9,11 @@ import Login from "../Login";
 import Registration from "../Registration";
 import RegistrationConfirmation from "../RegistrationConfirmation";
 import Template from "../Template";
+import { useDispatch, useSelector } from "react-redux";
+import { AuthSelector } from "../../redux/reducers/authReducer";
 
-const router = () => {
+const Router = () => {
+  const isLoggedIn = useSelector(AuthSelector.getLogStatus);
   return (
     <BrowserRouter>
       <Routes>
@@ -35,4 +38,4 @@ const router = () => {
   );
 };
 
-export default router;
+export default Router;
